@@ -50,7 +50,7 @@ const sendMessage = (messageData) => {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
     qs: {
-      access_token: "EAACvfQZANqcMBABfZBc2kGfGF5JfOrXhbZAf2MEsrL7masS8TB1eNl3X3tKE85VVXLCsWK0FsaKD8He4gQdK8ZBJkafqI6ZAPrGZBgJ9OW1ZAIKqGOAv2rW0PUW2Nr8BZCkqCTsKSgWX4gqHnFGq7NqsXdk0OYmzREsdi5FBMZAeZCnAZDZD"
+      access_token: "EAAMcbkLMnvYBALm2zZA7ggSG3ZBcFYplitphcr8M7knv5axHpOecQ3rrkwfFT7YccwVYsDn9pHBrOBZAZApWkkgsNz4TkUZCPEpKwz4il1y2M8hVJHObV2dKEZC3iJSiQOOqZA9z7a3zIkGAnKWSffulRayVYJyqj0Nhsb1sYWZC4jJmp7ow9swe"
     },
     method: 'POST',
     json: messageData

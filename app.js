@@ -36,20 +36,20 @@ const receiveMessage = (event) => {
   const senderId = event.sender.id;
   const messageText = event.message.text;
 
-  function responder(msg){
+/*  function responder(msg){
     var respuesta;
     if (msg=="Hola") {
       respuesta = "Como estas"
     }
     return respuesta;
   }
-  var respuesta = responder(messageText);
+  var respuesta = responder(messageText);*/
   const messageData = {
     recipient: {
       id: senderId
     },
     message: {
-      text: respuesta;
+      text: messageText;
     }
   };
   sendMessage(messageData);

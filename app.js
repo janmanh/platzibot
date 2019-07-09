@@ -35,21 +35,12 @@ app.post('/webhook', function (req, res) {
 const receiveMessage = (event) => {
   const senderId = event.sender.id;
   const messageText = event.message.text;
-
-/*  function responder(msg){
-    var respuesta;
-    if (msg=="Hola") {
-      respuesta = "Como estas"
-    }
-    return respuesta;
-  }
-  var respuesta = responder(messageText);*/
   const messageData = {
     recipient: {
       id: senderId
     },
     message: {
-      text: messageText;
+      text: messageText
     }
   };
   sendMessage(messageData);

@@ -35,7 +35,7 @@ app.post('/webhook', function (req, res) {
 function contestar(mensaje){
   var respuesta = 0;
   if(mensaje == "Hola"){
-    respuesta = "Hola crayola";
+    respuesta = "Hello World";
   }
   return respuesta;
 }
@@ -45,10 +45,10 @@ const receiveMessage = (event) => {
   
   const senderId = event.sender.id;
   const messageText = event.message.text;
-  
-  if(messageText == "Hola"){
+  respuesta = contestar(messageText);
+ /* if(messageText == "Hola"){
     respuesta = "Hola crayola";
-  }
+  }*/
 
   const messageData = {
     recipient: {

@@ -41,15 +41,21 @@ function contestar(mensaje){
 }
 
 const receiveMessage = (event) => {
+  var respuesta = 0;
+  
   const senderId = event.sender.id;
   const messageText = event.message.text;
-  responder = contestar(messageText);
+  
+  if(messageText == "Hola"){
+    respuesta = "Hola crayola";
+  }
+
   const messageData = {
     recipient: {
       id: senderId
     },
     message: {
-      text: responder
+      text: respuesta
     }
   };
   sendMessage(messageData);

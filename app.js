@@ -32,15 +32,24 @@ app.post('/webhook', function (req, res) {
   }
 });
 
+function contestar(mensaje){
+  var respuesta = 0;
+  if(mensaje == "Hola"){
+    respuesta = "Hola crayola";
+  }
+  return respuesta;
+}
+
 const receiveMessage = (event) => {
   const senderId = event.sender.id;
   const messageText = event.message.text;
+  responder = contestar(messageText);
   const messageData = {
     recipient: {
       id: senderId
     },
     message: {
-      text: "Hola Mundo"
+      text: responder
     }
   };
   sendMessage(messageData);

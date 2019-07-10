@@ -37,6 +37,12 @@ function contestar(mensaje){
   if(mensaje == "Hola"){
     respuesta = "Hello World";
   }
+  else if(mensaje == "hola") {
+    respuesta = "holi";
+  }
+  else{
+    respuesta = "Hola en qué podemos servirle?"
+  }
   return respuesta;
 }
 

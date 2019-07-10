@@ -40,7 +40,7 @@ const receiveMessage = (event) => {
       id: senderId
     },
     message: {
-      text: messageText
+      text: "Hola Mundo"
     }
   };
   sendMessage(messageData);
